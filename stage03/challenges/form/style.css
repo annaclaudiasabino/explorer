@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #EFEFEF;
+    --brand-01: #535971;
+    --brand-02: #FF5374;
+    --back-lines-in-white: #E6E6F0;
+    --shapes-02: #FAFAFC;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Poppins', sans-serif;
+}
+
+body::before{
+    content: '';
+    width: 100%;
+    height: 436px;
+    background: #535971;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+h1, h2, legend {
+    font-family: 'Staatliches', sans-serif;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 3rem;
+    margin-bottom: .75rem;
+}
+
+p {
+    color: #FFF;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    max-width: 25rem;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+}
+
+legend {
+    width: 100%;
+    color: var(--brand-01);
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #E6E6F0;
+    margin-bottom: 2rem;
+}
+
+.form-wrapper {
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+    background: #FFF;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+label {
+    color: #4E4958;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+label span {
+    color: #C1BCCC;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+input {
+    width: 100%;
+    height: 3.5rem;
+    padding: 4px 16px;
+    border-radius: 0.5rem;
+    border: 1px solid var(--back-lines-in-white);
+    background: var(--shapes-02);
+    margin-bottom: 1rem;
+}
+
+.date-wrapper h2 {
+    color: #535971;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+}
+
+.date-wrapper .col-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.button-wrapper {
+    border-radius: 0rem 0rem 1.25rem 1.25rem;
+    background: #535971;
+    padding: 4rem;
+}
+
+.button-wrapper button {
+    background: var(--brand-02);
+    color: #FFF;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-wrapper button:hover {
+    background: #be3d57;
+}

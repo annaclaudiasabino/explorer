@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - Challenge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Mentoria</h1>
+      <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+      <form>
+        <div class="form-wrapper">
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <div class="col-2">
+                    <div class="input-wrapper">
+                        <label for="fist-name">Nome</label>
+                        <input type="text" id="fist-name" required />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="last-name">Sobrenome</label>
+                        <input type="text" id="last-name" />
+                      </div>
+                </div>
+                <div class="input-wrapper">
+                  <label for="email"
+                    >Email <span>(digite um email válido)</span></label
+                  >
+                  <input type="email" id="email" required />
+                </div>
+                <div class="input-wrapper">
+                  <label for="password"
+                    >Senha <span>(mínimo de 6 caracteres)</span></label
+                  >
+                  <input type="password" id="password" required />
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Informações do mentor</legend>
+                <div class="input-wrapper">
+                  <label for="mentor-name"
+                    >Nome do seu mentor <span>(só o primeiro nome)</span></label
+                  >
+                  <input type="text" id="mentor-name" required />
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Seus horários disponíveis</legend>
+                <div class="date-wrapper">
+                  <h2>Primeira mentoria</h2>
+                  <div class="col-3">
+                    <div class="input-wrapper">
+                        <label for="first-date-one">Data <span>(DD/MM/AAAA)</span></label>
+                        <input type="date" id="first-date-one" required />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="first-time-one">Das</label>
+                        <input type="time" id="first-time-one" required />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="last-time-one">Até</label>
+                        <input type="time" id="last-time-one" required />
+                      </div>
+                  </div>
+                </div>
+                <div class="date-wrapper">
+                  <h2>Segunda mentoria</h2>
+                  <div class="col-3">
+                    <div class="input-wrapper">
+                        <label for="first-date-two">Data <span>(DD/MM/AAAA)</span></label>
+                        <input type="date" id="first-date-two" />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="first-time-two">Das</label>
+                        <input type="time" id="first-time-two" />
+                      </div>
+                      <div class="input-wrapper">
+                        <label for="last-time-two">Até</label>
+                        <input type="time" id="last-time-two" />
+                      </div>
+                  </div>
+                </div>
+              </fieldset>
+        </div>
+        <div class="button-wrapper">
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

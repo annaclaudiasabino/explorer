@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand: hsl(350, 100%, 73%);
+    --brand-input: hsla(0, 0%, 100%, 0.164);
+    --brand-hover: hsl(350, 80%, 80%);
+    --platform-aliases: #121214;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.container, aside {
+    padding: 0 1.6rem;
+}
+
+nav, footer {
+    width: 100%;
+    padding: 1rem 0;
+    background: var(--brand);
+    color: white;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+nav .container > img {
+    width: 4rem;
+    height: 4rem;
+    padding: .8rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.input-wrapper {
+    width: 100%;
+    max-width: 1083px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background-color: var(--brand-input);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 16px 12px 14px;
+    align-items: center;
+}
+
+.input-wrapper input::placeholder {
+    color: white;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.avatar img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+article img, aside img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: 100 100;
+}
+
+article h1 {
+    margin-top: 3.2rem;
+    font-size: 2.4rem;
+}
+
+article p {
+    margin-bottom: 3.2rem;
+}
+
+.card-article {
+    display: grid;
+    grid-template-areas: 
+    "image title"
+    "image description";
+    gap: .4rem 1.6rem;
+    place-content: center;
+}
+
+.card-article img {
+    width: 20vw;
+    height: 8.6rem;
+    border-radius: 4px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    grid-area: image;
+}
+
+.card-article h3 {
+    grid-area: title;
+}
+
+.card-article p {
+    font-size: 1.4rem;
+}
+
+.group-social-buttons {
+    margin-top: 8px;
+    margin-bottom: 3.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.group-social-buttons button {
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brand);
+    border-radius: 50%;
+    transition: background-color .2s ease-in;
+}
+
+.group-social-buttons button:hover {
+    background-color: var(--brand-hover);
+}
+
+.group-social-buttons button .ph {
+    color: white;
+    font-size: 2rem;
+}
+
+aside {
+    display: grid;
+    gap: 3.2rem;
+}
+
+footer {
+    margin-top: 3.2rem;
+    display: grid;
+    place-content: center;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    #app {
+        display: grid;
+        grid-template-rows: max-content 1fr max-contents;
+        gap: 3.2rem;
+    }
+
+    main img {
+        border-radius: 8px;
+    }
+
+    .title-wrapper {
+        margin: 3.2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title-wrapper h1, .group-social-buttons {
+        margin: 0rem;
+    }
+
+    .content-article {
+        max-width: 1040px;
+        padding: 3.2px 0;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 3.2rem;
+        align-self: start;
+        align-content: start;
+        animation: window 1s ease-in-out;
+    }
+
+    .card-article {
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color .5s ease-in-out, color .4s ease-in-out;
+        place-items: start;
+    }
+
+    .card-article:hover {
+        background-color: var(--brand-hover);
+        color: white;
+    }
+
+    .card-article h3 {
+        text-align: left;
+    }
+
+    .card-article img {
+        width: 100px;
+        height: 100%;
+        height: 8.6rem;
+    }
+
+    .card-article p {
+        gap: .4rem 1.6rem;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+}
+
+@keyframes window {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -38,6 +38,7 @@ const patients = [
         alert(`${patientsNames[index]} é paciente da nossa clinica, tem ${patientsAge[index]} anos, possui ${patientsWeight[index]} kilos e tem uma altura de ${patientsHeight[index]} e seu IMC é de ${imcCalc.toFixed(2)}`)       
     }
     
+    
     // let namePatient = prompt("Digite o nome do paciente:")
 
 

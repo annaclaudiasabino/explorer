@@ -1,4 +1,4 @@
-import { modal } from './modal.js'
+import { modal } from './js/modal.js'
 
 //Calculadora
 const form = document.getElementById("form");

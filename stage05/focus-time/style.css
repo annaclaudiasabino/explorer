@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+    --hue: 194;
+    --bg-color: hsl(var(--hue), 5%, 7%);
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+}
+
+html {
+    font-size: 16px;
+}
+
+html.light {
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toogle-mode {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    line-height: 0;
+    font-size: 3.2rem;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+#app {
+    display: grid;
+    justify-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6.4rem;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.secundary {
+    color: var(--button-secondary);
+}
+
+.runnig .ph-play-circle,
+.runnig .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.runnig) .ph-pause-circle,
+html:not(.runnig) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
+    display: none;
+}
+

@@ -11,7 +11,8 @@
 </head>
 <body>
     <div id="app">
-        <button id="toogle-mode">
+        <button id="toggle-mode">
+            <span class="sr-only" id="text-mode-indentifier">Dark mode ativado! Clique aqui para desativar.</span>
             <i class="ph ph-bold ph-sun"></i>
             <i class="ph ph-bold ph-moon"></i>
         </button>
@@ -21,14 +22,22 @@
             <span id="seconds">00</span>
         </section>
         <section id="controls">
-            <button class="ph ph-play-circle"></button>
-            <button class="ph ph-pause-circle"></button>
-            <button class="ph ph-timer secundary"></button>
-            <button class="ph ph-stop-circle secundary"></button>
-            <button class="ph ph-speaker-none secundary"></button>
-            <button class="ph ph-speaker-high"></button>
+            <button class="ph ph-play-circle">
+                <span class="sr-only">iniciar contador</span>
+            </button>
+            <button class="ph ph-pause-circle">
+                <span class="sr-only">pausar contador</span>
+            </button>
+            <button class="ph ph-timer secundary">
+                <span class="sr-only">ajustar contador</span>
+            </button>
+            <button class="ph ph-stop-circle secundary">
+                <span class="sr-only">reiniciar contador</span>
+            </button>
+            <button class="ph ph-speaker-none secundary"><span class="sr-only">iniciar musica</span></button>
+            <button class="ph ph-speaker-high"><span class="sr-only">pausar musica</span></button>
         </section>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,20 +22,32 @@
             <span id="seconds">00</span>
         </section>
         <section id="controls">
-            <button class="ph ph-play-circle">
+            <button 
+            data-action="toggleTimer"
+            class="ph ph-play-circle">
                 <span class="sr-only">iniciar contador</span>
             </button>
-            <button class="ph ph-pause-circle">
+            <button 
+            data-action="toggleTimer"
+            class="ph ph-pause-circle">
                 <span class="sr-only">pausar contador</span>
             </button>
-            <button class="ph ph-timer secundary">
+            <button 
+            data-action="modifyTimer"
+            class="ph ph-timer secundary">
                 <span class="sr-only">ajustar contador</span>
             </button>
-            <button class="ph ph-stop-circle secundary">
+            <button
+            data-action="resetTimer"
+            class="ph ph-stop-circle secundary">
                 <span class="sr-only">reiniciar contador</span>
             </button>
-            <button class="ph ph-speaker-none secundary"><span class="sr-only">iniciar musica</span></button>
-            <button class="ph ph-speaker-high"><span class="sr-only">pausar musica</span></button>
+            <button
+            data-action="toggleMusic"
+            class="ph ph-speaker-none secundary"><span class="sr-only">iniciar musica</span></button>
+            <button 
+            data-action="toggleMusic"
+            class="ph ph-speaker-high"><span class="sr-only">pausar musica</span></button>
         </section>
     </div>
     <script type="module" src="src/main.js"></script>

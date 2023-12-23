@@ -85,11 +85,11 @@ button:hover {
     color: var(--button-secondary);
 }
 
-.runnig .ph-play-circle,
-.runnig .ph-timer,
+.running .ph-play-circle,
+.running .ph-timer,
 .music-on .ph-speaker-none,
-html:not(.runnig) .ph-pause-circle,
-html:not(.runnig) .ph-stop-circle,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
 html:not(.music-on) .ph-speaker-high {
     display: none;
 }

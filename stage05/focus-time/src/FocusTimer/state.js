@@ -3,4 +3,5 @@ export default {
     seconds: 0,
     isRunnig: false,
     isMute: true,
+    countdownId: null
 }

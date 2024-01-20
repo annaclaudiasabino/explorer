@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-pink: #F9F4FB;
+    --pink: #B52184;
+    --purple: #312D64;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: var(--light-pink);
+    font-size: 1rem;
+}
+
+h1, h2 {
+    color: var(--pink);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: var(--purple);
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    padding: 0 2.44rem;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    text-align: center;
+    padding-bottom: 5.61rem;
+}
+
+.header-wrapper img:first-child {
+    margin-bottom: 1.06rem;
+}
+
+.header-wrapper p {
+    margin-bottom: 2.19rem;
+    margin-top: 0.4rem;
+}
+
+.section-planets {
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    padding: 3.31rem 0;
+}
+
+.section-planets .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.1rem;
+}
+
+.card {
+    padding: 1.6rem;
+    border-radius: 1.24156rem;
+    background: #FFF;
+    box-shadow: 0px 3.311px 13.243px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    margin-bottom: 2.07rem;
+}
+
+.paragraph-card {
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.04rem;
+}
+
+.section-contact {
+    padding: 4rem 0;
+}
+
+.section-contact h2 {
+    margin-bottom: 2.19rem;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group svg {
+    position: absolute;
+    left: 1rem;
+    top: .6rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+input {
+    padding-left: 2.8rem!important;
+}
+
+input, textarea {
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    color: var(--purple);
+    border-radius: 1rem;
+    border: 1.5px solid #312D64;
+    padding: 0.75rem 1rem .75rem 1rem;
+}
+
+label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+button {
+    font-family: 'Mulish', sans-serif;
+    color: var(--light-pink);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    transition: all 0.5s easy;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #343193 0%, #302C63 80%);
+}
+
+.img-footer {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+    padding: 2rem;
+    color: var(--light-pink);
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: 3.64294rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 2rem;
+    }
+
+    .header-wrapper img {
+        max-width: 50%;
+    }
+
+    .content-wrapper {
+        height: 26rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: 3rem;
+    }
+
+    .arrow {
+        width: 3.66rem;
+    }
+
+    .arrow img {
+        min-width: 100%;
+    }
+
+    .section-planets .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .section-contact h2 {
+        font-size: 2.6rem;
+    }
+    .section-contact  {
+        position: relative;
+    }
+
+    .form {
+    max-width: 50%;
+    }
+
+    .img-footer {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        z-index: -1;
+    }
+}

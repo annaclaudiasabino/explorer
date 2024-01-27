@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    justify-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dark-mode {
+    position: absolute;
+}
+
+#sounds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.timer {
+    font-size: 8rem;
+}
+
+button {
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.controls button {
+    background-color: transparent;
+}
+
+.sounds button {
+    background-color: #E1E1E6;
+}

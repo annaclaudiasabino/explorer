@@ -9,12 +9,16 @@ body {
 }
 
 #page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
-    justify-items: center;
     width: 100vw;
     height: 100vh;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .dark-mode {
@@ -28,6 +32,7 @@ body {
 }
 
 .timer {
+    display: flex;
     font-size: 8rem;
 }
 
@@ -49,6 +54,27 @@ button {
     background-color: transparent;
 }
 
+.controls button:hover {
+    opacity: 0.8;
+}
+
 .sounds button {
     background-color: #E1E1E6;
+}
+
+.pause-icon {
+    display: none;
+}
+
+.running .play-icon {
+    display: none;
+}
+
+.running .pause-icon {
+    display: block;
+}
+
+.active-sound {
+    background: #02799D;
+    color: white;
 }

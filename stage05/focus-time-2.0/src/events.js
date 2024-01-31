@@ -46,23 +46,31 @@ import * as actionSounds from './actions-sounds.js'
 //   audio.audioCoffe.pause()
 // })
 
-export function registerAudios() {
-  el.sounds.addEventListener('click',(event) => {
-    const targetSound = event.target.parentNode;
-      if (targetSound.tagName !== 'BUTTON') {
-        return;
-      }
-    const dataSound = targetSound.dataset.sound;
-    actionSounds[dataSound]()
+export function registerControls() {
+  const controlsTarget = el.controls.getElementsByTagName('button');
+  const controlsTargetArray = [...controlsTarget]
+
+  controlsTargetArray.forEach(item => {
+    item.addEventListener('click', (event) => {
+      const targetConstrol = event.target.closest('button');
+      const action = targetConstrol.dataset.action;
+      actionsControls[action]();
+    })
   })
 }
 
-export function registerControls() {
-  el.controls.addEventListener('click', (event) => {
-    const action = event.target.dataset.action;
-    if (typeof actionsControls[action] !== "function") {
-      return;
-    }
-    actionsControls[action]()
-  })
-}
+export function registerAudios() {
+  const soundTarget = el.sounds.getElementsByTagName('button');
+  const soundTargetArray = [...soundTarget]
+
+  soundTargetArray.forEach(item => {
+    item.addEventListener('click',(event) => {
+      const targetSound = event.target.closest('button');
+      const dataSound = targetSound.dataset.sound;
+      actionSounds[dataSound]();
+    });
+  });
+};
+
+registerControls()
+registerAudios()

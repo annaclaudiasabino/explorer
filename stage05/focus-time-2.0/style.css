@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 #page {
@@ -41,6 +42,7 @@ button {
     border-radius: 2rem;
     cursor: pointer;
     transition: 0.2s;
+    z-index: 1;
 }
 
 .controls {
@@ -78,3 +80,21 @@ button {
     background: #02799D;
     color: white;
 }
+
+@media (max-width: 600px) {  
+    #page {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .timer {
+        justify-content: center;
+        font-size: 6rem;
+        margin-bottom: 1%;
+    }
+
+    .controls {
+        gap: 1rem;
+    }
+  }

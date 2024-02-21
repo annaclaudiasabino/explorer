@@ -16,7 +16,14 @@ export function countDown() {
     minutes--
   } else if(minutes === 0 & seconds === 0) {
     actionStop()
+    el.minus.disabled = false;
+    el.minus.style.opacity = "1";
     return;
+  }
+
+  if(seconds < 5) {
+    el.minus.disabled = true; // Desabilita o botão de decremento
+    el.minus.style.opacity = "0.5";
   }
 
   updateDisplay(minutes, seconds)
@@ -26,35 +33,51 @@ export function countDown() {
 export function increment() {
   if(state.isPlay) {
     state.isPlay = false;
+    document.documentElement.classList.remove('running');
   }
   let minutes = Number(el.minutes.textContent)
   let seconds = Number(el.seconds.textContent)
   
   seconds += 5;
-  if(seconds > 55) {
+  if(seconds >= 59) {
     let rest = seconds % 5
     seconds = rest
     minutes++
   } 
+
+  if(minutes === 0 && seconds > 5) {
+    el.minus.disabled = false; // Desabilita o botão de decremento
+    el.minus.style.opacity = "1"; 
+  }
+
   updateDisplay(minutes, seconds)
 }
 
 export function decrement() {
+  let minus = el.minus
   if(state.isPlay) {
     state.isPlay = false;
+    document.documentElement.classList.remove('running');
   }
   let minutes = Number(el.minutes.textContent)
   let seconds = Number(el.seconds.textContent)
 
   seconds -= 5;
-  if(seconds > 5) {
-    let rest = seconds % 5
-    seconds = rest
-    minutes--
-  } 
-  updateDisplay(minutes, seconds)
-}
+  if(seconds < 0) {
+    let rest = seconds % 60;
+    seconds = 60 + rest;
+    minutes--;
+  }
 
+  if (minutes === 0 && seconds < 5) {
+    minus.disabled = true; 
+    minus.style.opacity = "0.5";
+    updateDisplay(minutes, seconds); 
+    return;
+  }
+
+  updateDisplay(minutes, seconds);
+}
 
  export function updateDisplay(minutes, seconds) {
   minutes = minutes ?? state.minutes;

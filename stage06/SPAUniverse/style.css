@@ -25,12 +25,25 @@ button {
   font-weight: 700;
   line-height: 2.4rem; /* 171.429% */
   text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid #FFF;
+  padding: 1.2rem 3.2rem;
+  color: #FFF;
+  background-color: transparent;
   transition: background-color 0.2s, color 0.2s;
 }
 
 button:hover {
   background-color: white;
   color: #02799D;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4rem 7.2rem;
+  gap: 4rem;
 }
 
 nav a {
@@ -49,3 +62,21 @@ nav a:active {
   font-weight: 700;
 }
 
+#app {
+  width: 100%;
+}
+
+.body-home {
+  height: 100vh;
+  background-image: url(./img/mountains-universe-1.png);
+  background-position: 0% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

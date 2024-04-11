@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 65.5%;
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #303030;
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+  color: var(--text-color);
+}
+
+#app {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0 .8rem;
+  border-radius: .4rem 0 0 .4rem;
+}
+
+.search button {
+  background-color: var(--primary-color);
+  height: 3.2rem;
+  font-size: 1.6rem;
+  padding: 0 1.6rem;
+  border-radius: 0 .4rem .4rem 0;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.6rem;
+
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+
+table td {
+  padding: 1.6rem;
+}
+
+table th {
+  background-color: var(--primary-color);
+  text-align: left;
+  padding: 1.6rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+table tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+table td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  min-width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+table td.user a {
+  text-decoration: none;
+}
+
+table td.user a p {
+  font-weight: 700;
+}
+
+table td.remove button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+  font-size: large;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

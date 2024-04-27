@@ -7,9 +7,10 @@
   <title>GitFav</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="app.css">
+  <script type="module" src="./js/script.js" defer></script>
 </head>
 
-<body class="bg-black m-0 p-0 max-h-screen w-screen text-white font-['Roboto']">
+<body class="bg-gray-950 m-0 p-0 max-h-screen w-screen text-white font-['Roboto']">
   <div class="flex flex-col items-center mt-8 md:mt-[115px] mx-auto max-w-[1200px] w-full gap-12 px-8" id="app">
     <header class="flex flex-col items-center gap-8 w-full justify-between md:flex-row">
       <img src="./assets/logo.svg" alt="Logo GitFav">
@@ -29,7 +30,7 @@
         <div class="-m-1.5 overflow-x-auto">
           <div class="p-1.5 min-w-full inline-block align-middle">
             <div class="border-2 border-slate-600 rounded-lg overflow-hidden">
-              <table class="min-w-full">
+              <table class="min-w-full max-h-[60vh]">
                 <thead class="bg-slate-800">
                   <tr>
                     <th scope="col" class="md:w-5/12 px-6 py-3 text-start text-base font-medium">Usuário</th>
@@ -38,7 +39,7 @@
                     <th scope="col" class="md:w-1/12 px-6 py-3 text-start text-base font-medium">Ação</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y-2 divide-slate-700">
+                <tbody class="divide-y-2 divide-slate-700 bg-slate-950">
                   <tr class="odd:bg-slate-950 even:bg-slate-900">
                     <td class="px-6 py-4 whitespace-nowrap text-base font-medium text-gray-200">
                       <div class="flex gap-4 items-center">
@@ -54,11 +55,15 @@
                     <td class="px-6 py-4 whitespace-nowrap text-base text-gray-200">45</td>
                     <td class="px-6 py-4 whitespace-nowrap text-base text-gray-200">1234</td>
                     <td class="px-6 py-4 whitespace-nowrap text-base font-medium">
-                      <button type="button" class="inline-flex items-center gap-x-2 text-base font-semibold rounded-lg border border-transparent text-red-400 hover:text-red-800 disabled:opacity-50 disabled:pointer-events-none">Remover</button>
+                      <button type="button" class="inline-flex items-center gap-x-2 text-base font-semibold rounded-lg border border-transparent text-red-500 hover:text-red-800 disabled:opacity-50 disabled:pointer-events-none">Remover</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
+                  <!-- <div class="bg-slate-950 w-full h-screen max-h-[60vh] flex items-center justify-center gap-8">
+                    <img src="./assets/star.svg" alt="Estrela do git fav">
+                    <p class="text-gray-200 font-bold text-3xl opacity-40">Nenhum favorito ainda</p>
+                  </div> -->
             </div>
           </div>
         </div>
